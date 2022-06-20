@@ -5,10 +5,14 @@ package glogin
 
 class App {
     String getGreeting() {
-        return 'Hello World!'
+        'Hello World!'
     }
 
     static void main(String[] args) {
-        println new App().greeting
+        def app=new App()
+        println app.greeting
+        println 'Sistema de control de usuario'.center(100)
+        new MainMenu().sayMenuMain()
     }
+
 }

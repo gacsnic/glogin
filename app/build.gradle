@@ -12,8 +12,12 @@ plugins {
 
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
-}
 
+   // id 'java-library'
+}
+def nameapp='glogin'
+def versionapp = '0.0.1'
+def mainclassapp='glogin.App'
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -21,22 +25,50 @@ repositories {
 
 dependencies {
     // Use the latest Groovy version for building this library
-    implementation 'org.codehaus.groovy:groovy-all:3.0.9'
+    implementation 'org.apache.groovy:groovy:4.0.3'
+
 
     // This dependency is used by the application.
-    implementation 'com.google.guava:guava:30.1.1-jre'
+    implementation 'com.google.guava:guava:31.1-jre'
+    // https://mvnrepository.com/artifact/org.groovyfx/groovyfx
+    //    implementation 'org.groovyfx:groovyfx:8.0.0'
+
+
+    // https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
+
 
     // Use the awesome Spock testing and specification framework even with Java
-    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
-    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.spockframework:spock-core:2.2-M1-groovy-4.0'
+    testRuntimeOnly 'junit:junit:4.13.2'
+
+
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'glogin.App'
+    mainClass = mainclassapp
 }
+
+jar {
+    manifest {
+
+        attributes('Main-Class': "$mainclassapp",
+                'Class-Path': configurations.runtimeClasspath.files.collect { it.getName() }.join(' '))
+    }
+    from {
+        configurations.compileClasspath.collect {
+            it.isDirectory()? it : zipTree(it)
+        }}
+    }
+
+run{
+    standardInput = System.in
+}
+
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
