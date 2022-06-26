@@ -3,6 +3,8 @@
  */
 package glogin
 
+import glogin.ui.menus.MainMenu
+
 class App {
     String getGreeting() {
         'Hello World!'

@@ -1,4 +1,4 @@
-package glogin
+package glogin.ui.menus
 
 class MainMenu {
 

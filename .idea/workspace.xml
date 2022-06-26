@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23fe11ff-2c94-4028-867b-feb8f2370ebf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/MainMenu.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/AccessModule.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Authenticate.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Identifier.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Modules.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Privilege.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Status.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Users.groovy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/test/groovy/glogin/UsersTest.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
@@ -17,6 +24,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/groovy/glogin/App.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/App.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/groovy/glogin/MainMenu.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/ui/menus/MainMenu.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/groovy/glogin/AppTest.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/groovy/glogin/AppTest.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
@@ -98,9 +106,17 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/gacs/home/gcastro/gacsoft/glogin&quot;
+    &quot;last_opened_file_path&quot;: &quot;E:/gacs/home/gcastro/gacsoft/glogin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="glogin.ui.menus" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle app:run" />
@@ -108,8 +124,8 @@
       <command value="gradle app:compileGroovy" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.glogin [jar]">
-    <configuration name="glogin [app:clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UsersTest (1)">
+    <configuration name="UsersTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -120,12 +136,60 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="app:clean" />
+            <option value=":app:test" />
+            <option value="--tests" />
+            <option value="&quot;glogin.UsersTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UsertTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+            <option value="--tests" />
+            <option value="&quot;glogin.UsertTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UsertTest.Usert test " type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:test" />
+            <option value="--tests" />
+            <option value="&quot;glogin.UsertTest.Usert test &quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -142,27 +206,6 @@
         <option name="taskNames">
           <list>
             <option value="app:compileGroovy" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="glogin [app:run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="app:run" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,34 +236,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="glogin [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UsersTest (1)" />
+        <item itemvalue="Gradle.UsertTest.Usert test " />
+        <item itemvalue="Gradle.UsertTest" />
         <item itemvalue="Gradle.glogin [jar]" />
         <item itemvalue="Gradle.glogin [app:compileGroovy]" />
-        <item itemvalue="Gradle.glogin [run]" />
-        <item itemvalue="Gradle.glogin [app:run]" />
-        <item itemvalue="Gradle.glogin [app:clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -245,5 +267,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/glogin$UsersTest__1_.ic" NAME="UsersTest (1) Coverage Results" MODIFIED="1656279125506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/glogin$UsersTest.ic" NAME="UsersTest (1) Coverage Results" MODIFIED="1656271015022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/glogin$UsertTest_Usert_test_.ic" NAME="UsertTest.Usert test  Coverage Results" MODIFIED="1656262059450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
