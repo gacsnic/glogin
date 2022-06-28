@@ -16,5 +16,7 @@ trait BaseDao<T,ID extends Object> {
     T getOne(ID id){
         converTo(cnn.firstRow("Select * from $nameTable WHERE id $id"))
     }
-    abstract T converTO(GroovyRowResult rs)
+    abstract T converToObject(GroovyRowResult rs)
+    abstract GroovyRowResult converToRowResult(GroovyRowResult T)
+
 }

@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23fe11ff-2c94-4028-867b-feb8f2370ebf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/dao/BaseDao.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
@@ -17,6 +16,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/groovy/glogin/App.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/App.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/dao/BaseDao.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/dao/BaseDao.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/AccessModule.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/AccessModule.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Authenticate.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Authenticate.groovy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Identifier.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/groovy/glogin/data/model/Identifier.groovy" afterDir="false" />
