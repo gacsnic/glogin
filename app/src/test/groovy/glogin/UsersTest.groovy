@@ -4,7 +4,7 @@ import glogin.data.model.Users
 import spock.lang.Specification
 
 class UsersTest extends Specification {
-    def "Usert test "() {
+    def "Users test "() {
         setup:
         def users = new Users()
 

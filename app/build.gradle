@@ -27,15 +27,19 @@ dependencies {
     // Use the latest Groovy version for building this library
     implementation 'org.apache.groovy:groovy:4.0.3'
 
+    // https://mvnrepository.com/artifact/org.apache.groovy/groovy-sql
+    implementation 'org.apache.groovy:groovy-sql:4.0.3'
+
+    // https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
+    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
 
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:31.1-jre'
+
     // https://mvnrepository.com/artifact/org.groovyfx/groovyfx
     //    implementation 'org.groovyfx:groovyfx:8.0.0'
 
 
-    // https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc
-    implementation 'org.xerial:sqlite-jdbc:3.36.0.3'
 
 
     // Use the awesome Spock testing and specification framework even with Java
@@ -52,7 +56,7 @@ application {
 
 jar {
     manifest {
-
+        duplicatesStrategy = 'include'
         attributes('Main-Class': "$mainclassapp",
                 'Class-Path': configurations.runtimeClasspath.files.collect { it.getName() }.join(' '))
     }
@@ -60,6 +64,7 @@ jar {
         configurations.compileClasspath.collect {
             it.isDirectory()? it : zipTree(it)
         }}
+    //from sourceSets.main.allSource
     }
 
 run{
